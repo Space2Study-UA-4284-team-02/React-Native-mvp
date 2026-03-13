@@ -30,10 +30,13 @@ export const styles = StyleSheet.create({
     flexDirection: 'row-reverse'
   },
   buttonText: {
-    color: palette.secondary
+    color: palette.secondary,
+    textTransform: 'none',
+    fontSize: 16,
   },
   button: {
-    backgroundColor: palette.surfaceVariant
+    backgroundColor: palette.surfaceVariant,
+    borderRadius: 28,
   },
   title: {
     marginVertical: 10

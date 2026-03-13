@@ -70,6 +70,7 @@ const MainContent = ({ nextStep, chooseRole, role }) => {
       </View>
       <Button
         contentStyle={styles.buttonContent}
+        labelStyle={styles.buttonText}
         icon={() => (
           <AntDesign
             color='#fff'
@@ -79,11 +80,11 @@ const MainContent = ({ nextStep, chooseRole, role }) => {
           />
         )}
         mode='contained'
-        onPress={onHandlePress}
+        onPress={onHandlePress} 
         style={styles.button}
       >
-        <PaperText style={styles.buttonText}>{t('signup.next')}</PaperText>
-      </Button>
+      {t('signup.next')}
+    </Button>
     </>
   )
 }
