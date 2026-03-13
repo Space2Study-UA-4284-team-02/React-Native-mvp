@@ -4,11 +4,17 @@ on:
     branches:
       - main
       - develop
+    pull_request:
+    branches:
+      - main
+      - develop
 jobs:
   build-android:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
       - name: Set up Java
         uses: actions/setup-java@v2
         with:
@@ -17,9 +23,9 @@ jobs:
       - name: Install npm dependencies
         run: |
           npm install
-      - name: Run tests
+      - name: Run coverage tests
         run: |
-          npm test
+          npm run test:coverage
       - name: Prebuild
         run: |
           npx expo prebuild
@@ -31,3 +37,10 @@ jobs:
         with:
           name: app-release.apk
           path: android/app/build/outputs/apk/release/
+        
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@9598b8a83feef37de07f549027fab50ecffe6a6e 
+        if: success() || failure()
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
