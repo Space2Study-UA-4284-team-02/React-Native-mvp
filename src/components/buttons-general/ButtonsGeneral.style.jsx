@@ -3,13 +3,9 @@ import palette from '~/styles/app-theme/app.pallete'
 
 export const styles = StyleSheet.create({
   button: {
-    alignItems: 'center',
     backgroundColor: palette.onSurface,
     borderRadius: 50,
-    flexDirection: 'row',
     flex: 1,
-    justifyContent: 'center',
-    padding: 3
   },
   buttonContent: {
     flexDirection: 'row-reverse'

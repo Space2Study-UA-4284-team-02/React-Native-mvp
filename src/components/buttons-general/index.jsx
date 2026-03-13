@@ -13,24 +13,19 @@ const ButtonsGeneral = () => {
       <View style={styles.buttonsRow}>
         <Button
           contentStyle={styles.buttonContent}
+          labelStyle={styles.buttonText}
           icon={() => (
-            <AntDesign
-              color='#fff'
-              name='arrowright'
-              size={20}
-              style={styles.icon}
-            />
+              <AntDesign
+                color='#fff'
+                name='arrowright'
+                size={20}
+              />
           )}
           mode='contained'
           onPress={() => router.replace('public/signup')}
           style={styles.button}
         >
-          <PaperText
-            onPress={() => router.replace('public/signup')}
-            style={styles.buttonText}
-          >
-            Get Started
-          </PaperText>
+          Get Started
         </Button>
       </View>
       <PaperText
