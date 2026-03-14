@@ -1,3 +1,5 @@
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Space2Study-UA-4284-team-02_React-Native-mvp&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=Space2Study-UA-4284-team-02_React-Native-mvp)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=Space2Study-UA-4284-team-02_React-Native-mvp&metric=coverage)](https://sonarcloud.io/summary/new_code?id=Space2Study-UA-4284-team-02_React-Native-mvp)
 ![photo2 (1)](https://github.com/user-attachments/assets/97c87961-7765-416d-bc79-69b1f39348b4)
 
 
