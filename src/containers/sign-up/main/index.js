@@ -80,7 +80,7 @@ const MainContent = ({ nextStep, chooseRole, role }) => {
           />
         )}
         mode='contained'
-        onPress={onHandlePress} 
+        onPress={onHandlePress}
         style={styles.button}
       >
       {t('signup.next')}
