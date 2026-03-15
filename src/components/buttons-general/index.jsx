@@ -14,11 +14,11 @@ const ButtonsGeneral = () => {
         <Button
           contentStyle={styles.buttonContent}
           icon={() => (
-              <AntDesign
-                color='#fff'
-                name='arrowright'
-                size={20}
-              />
+            <AntDesign
+              color='#fff'
+              name='arrowright'
+              size={20}
+            />
           )}
           labelStyle={styles.buttonText}
           mode='contained'
