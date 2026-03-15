@@ -13,7 +13,6 @@ const ButtonsGeneral = () => {
       <View style={styles.buttonsRow}>
         <Button
           contentStyle={styles.buttonContent}
-          labelStyle={styles.buttonText}
           icon={() => (
               <AntDesign
                 color='#fff'
@@ -21,6 +20,7 @@ const ButtonsGeneral = () => {
                 size={20}
               />
           )}
+          labelStyle={styles.buttonText}
           mode='contained'
           onPress={() => router.replace('public/signup')}
           style={styles.button}
