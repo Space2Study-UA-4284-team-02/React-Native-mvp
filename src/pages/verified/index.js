@@ -55,7 +55,7 @@ const Verified = () => {
         onPress={onPress}
         style={styles.loginButton}
       >
-        <PaperText style={[styles.loginText, styles.boldText]}>{t('verified.login')}</PaperText>
+        <PaperText style={[styles.loginText, styles.fontBold]}>{t('verified.login')}</PaperText>
       </Button>
     </View>
   )

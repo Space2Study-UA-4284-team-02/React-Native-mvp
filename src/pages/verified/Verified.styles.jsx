@@ -67,5 +67,8 @@ export const styles = StyleSheet.create({
   boldText: {
     fontWeight: 'bold',
     color: palette.outlineColor
+  },
+  fontBold: {
+    fontWeight: 'bold'
   }
 })
