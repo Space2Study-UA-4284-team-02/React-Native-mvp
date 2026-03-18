@@ -1,7 +1,7 @@
 import { View, Image } from 'react-native'
 import { Button } from 'react-native-paper'
 import { AntDesign } from '@expo/vector-icons'
-import { router } from 'expo-router'
+import { router, useLocalSearchParams } from 'expo-router'
 import { LinearGradient } from 'expo-linear-gradient'
 import { useTranslation } from 'react-i18next'
 
@@ -12,6 +12,7 @@ import { styles } from '~/pages/verified/Verified.styles'
 
 const Verified = () => {
   const { t } = useTranslation()
+  const { email } = useLocalSearchParams()
 
   const onPress = () => {
     router.replace('public/login')
@@ -32,10 +33,12 @@ const Verified = () => {
           <Image source={iconInfo} style={styles.image} />
         </View>
         <PaperText style={styles.title} variant='headlineMedium'>
-          {t('verified.title')}
+          Your email address {'\n'} needs to be <PaperText style={styles.greenText}>verified</PaperText>
         </PaperText>
         <PaperText style={styles.subtitle} variant='titleSmall'>
-          {t('verified.description')}
+          We sent a confirmation email to:{'\n'}
+          <PaperText style={styles.boldEmail}>{email}</PaperText>
+          {'\n'}Confirm your email to continue and <PaperText style={styles.boldText}>Log in.</PaperText>
         </PaperText>
       </View>
       <Button
@@ -52,7 +55,7 @@ const Verified = () => {
         onPress={onPress}
         style={styles.loginButton}
       >
-        <PaperText style={styles.loginText}>{t('verified.login')}</PaperText>
+        <PaperText style={[styles.loginText, styles.boldText]}>{t('verified.login')}</PaperText>
       </Button>
     </View>
   )
