@@ -61,9 +61,11 @@ export const styles = StyleSheet.create({
     color: '#4CAF50'
   },
   boldEmail: {
+    color: palette.outlineColor,
     fontWeight: 'bold'
   },
   boldText: {
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    color: palette.outlineColor
   }
 })
