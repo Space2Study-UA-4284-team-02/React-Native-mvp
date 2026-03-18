@@ -14,7 +14,7 @@ import {
 import palette from '~/styles/app-theme/app.pallete'
 import { styles } from './DetailedContent.styles'
 
-const DetailedContent = ({ visible, toggle, role, backStep }) => {
+const DetailedContent = ({ visible, toggle, role, backStep, email, setEmail }) => {
   const [checked, setChecked] = useState(false)
   const { t } = useTranslation()
 
@@ -27,7 +27,10 @@ const DetailedContent = ({ visible, toggle, role, backStep }) => {
   }
 
   const signUp = () => {
-    router.replace('public/verified')
+    router.replace({
+      pathname: 'public/verified',
+      params: { email }
+    })
   }
 
   const handlePress = () => {
@@ -55,6 +58,8 @@ const DetailedContent = ({ visible, toggle, role, backStep }) => {
             label={t('signup.email')}
             mode='outlined'
             theme={styles.inputTheme}
+            value={email}
+            onChangeText={setEmail}
           />
           <TextInput
             label={t('signup.password')}
