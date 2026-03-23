@@ -18,19 +18,14 @@ const ButtonsGeneral = () => {
               color='#fff'
               name='arrowright'
               size={20}
-              style={styles.icon}
             />
           )}
+          labelStyle={styles.buttonText}
           mode='contained'
           onPress={() => router.replace('public/signup')}
           style={styles.button}
         >
-          <PaperText
-            onPress={() => router.replace('public/signup')}
-            style={styles.buttonText}
-          >
-            Get Started
-          </PaperText>
+          Get Started
         </Button>
       </View>
       <PaperText
