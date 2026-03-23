@@ -1,6 +1,8 @@
 import { StyleSheet } from 'react-native'
 import palette from '~/styles/app-theme/app.pallete'
 
+const BUTTON_BORDER_RADIUS = 28
+
 export const styles = StyleSheet.create({
   root: (screenHeight) => ({
     display: 'flex',
@@ -30,10 +32,13 @@ export const styles = StyleSheet.create({
     flexDirection: 'row-reverse'
   },
   buttonText: {
-    color: palette.secondary
+    color: palette.secondary,
+    textTransform: 'none',
+    fontSize: 16,
   },
   button: {
-    backgroundColor: palette.surfaceVariant
+    backgroundColor: palette.surfaceVariant,
+    borderRadius: BUTTON_BORDER_RADIUS,
   },
   title: {
     marginVertical: 10
