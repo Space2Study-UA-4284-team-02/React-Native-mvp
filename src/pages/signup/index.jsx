@@ -10,6 +10,7 @@ import { Stack } from 'expo-router'
 const SignUp = () => {
   const [role, setRole] = useState('')
   const [secondStep, setSecondStep] = useState(false)
+  const [email, setEmail] = useState('')
   const [visible, setVisible] = useState({
     password: false,
     confirmPassword: false
@@ -27,6 +28,8 @@ const SignUp = () => {
       role={role}
       toggle={toggle}
       visible={visible}
+      email={email}
+      setEmail={setEmail}
     />
   ) : (
     <MainContent chooseRole={setRole} nextStep={setSecondStep} role={role} />
