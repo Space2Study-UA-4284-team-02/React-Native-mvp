@@ -35,9 +35,12 @@ const Login = () => {
   const handlePress = () => {
     dispatch(loginUser(data)).unwrap()
   }
+
   const onHandleChange = (text, key) => {
     setData((prev) => ({ ...prev, [key]: text }))
   }
+
+  const isLoginDisabled = !data.email.trim() || !data.password.trim()
 
   return (
     <View style={styles.root(screenHeight)}>
@@ -85,6 +88,7 @@ const Login = () => {
           </Link>
         </View>
         <Button
+          disabled={isLoginDisabled}
           mode='contained'
           onPress={handlePress}
           style={styles.loginButton}
